@@ -8,6 +8,76 @@
 - An Event has been related with more than one Participant.
 - Query to list all and fetch an id-based record on all types have been written.
 
+## The following queries are working:
+- query users{}
+- query user(id: 1){}
+
+- query events{}
+- query event(id: 1){}
+- query events{
+  - id
+  - title
+  - user{
+     id
+      username
+  - }
+  - pariticipants{
+      id
+      username
+  - }
+  - location{
+      id
+      name
+  - }
+- }
+
+- query locations{}
+- query location(id: 1){}
+
+- query participants{}
+- query participant(id: 1){}
+
+#
+#
+#
+
+## Özellikler
+- Temel olarak User, Event, Location ve Participant tipleri oluşturuldu. 
+- Bir User'a ait bir veya birden fazla Event olabilir.
+- Bir Event, bir User ile ilişkilidir.
+- Bir Event, bir Location ile ilişkilidir.
+- Bir Event birden fazla Participant ile ilişkilidir.
+- Tüm tipler üzerinde tümünü listeleme ve id bazlı bir kaydı getirme Query'leri yazıldı.
+
+## Aşağıdaki sorgular çalışır durumdadır:
+- query users{}
+- query user(id: 1){}
+
+- query events{}
+- query event(id: 1){}
+- query events{
+  - id
+  - title
+  - user{
+     id
+      username
+  - }
+  - pariticipants{
+      id
+      username
+  - }
+  - location{
+      id
+      name
+  - }
+- }
+
+- query locations{}
+- query location(id: 1){}
+
+- query participants{}
+- query participant(id: 1){}
+
 ## Installation
 Clone this repository on your local machine.
 
